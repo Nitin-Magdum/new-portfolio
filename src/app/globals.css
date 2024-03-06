@@ -46,3 +46,64 @@
     opacity: 1;
   }
 }
+
+.header {
+  @apply h-[4.5rem] w-full flex top-[-75px] items-center px-4 justify-between mx-auto;
+}
+
+.header .wrapper {
+  @apply max-w-[1440px] flex items-center justify-between w-full mx-auto;
+}
+
+.header.active {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  @apply fixed top-0 transition-all duration-300 left-0 w-full bg-white/80 border-b-[.1rem] z-[9999];
+}
+
+.header .logo {
+  @apply pl-3;
+}
+
+.header nav {
+  background-color: transparent !important;
+}
+
+.header nav ul {
+  @apply flex;
+}
+
+.header nav ul li {
+  @apply mx-3 hover:text-blue-600 font-medium text-blue-600 focus:border-0 focus:outline-none transition-colors duration-300 relative;
+}
+
+.header nav ul li::after {
+  content: "";
+  @apply h-[.18rem] w-0 bg-blue-600 absolute left-0 bottom-[-.1rem] rounded-lg transition-all duration-300;
+}
+
+.header nav ul li:hover::after {
+  @apply w-full;
+}
+
+.header nav ul li a {
+  @apply focus:border-0 focus:outline-none focus:text-blue-600;
+}
+
+.btn {
+  @apply px-6 py-2 rounded-full focus:border-0 focus:outline-none
+  hover:shadow-lg transition-shadow duration-300;
+}
+
+.primaryBtn {
+  @apply bg-blue-600 text-white;
+}
+
+.header .btns {
+  @apply flex items-center;
+}
+
+.menuBtn {
+  @apply text-2xl text-blue-600 hover:text-blue-800 transition-colors
+   duration-300 mx-4 hidden;
+}
