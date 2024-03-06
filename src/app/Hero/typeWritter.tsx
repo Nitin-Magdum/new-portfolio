@@ -1,19 +1,22 @@
 "use client";
-import { TypewriterEffectSmooth } from "../components/ui/typewriter-effect";
+import { TypewriterEffectSmooth } from "../../components/ui/typewriter-effect";
 export function TypewriterEffectSmoothDemo() {
   const words = [
     {
       text: "Hello,",
+      className: "text-while-500",
     },
     {
       text: "my name is",
+      className: "text-while-500",
     },
     {
-      text: "Nitin.",
+      text: "Nitin,",
       className: "text-blue-500 dark:text-blue-500",
     },
     {
-        text: "and I work as a "
+        text: "and I work as a",
+        className: "text-while-500",
     },
     {
         text: "Data Engineer.",
